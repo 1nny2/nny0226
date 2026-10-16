@@ -1,0 +1,35 @@
+# Local dependencies and build output
+node_modules/
+dist/
+.vercel/
+
+# Personal source materials and unrelated project folders
+文字说明/
+公益链条/
+暖心冰柜/
+头像/
+游戏项目/
+*.docx
+*.psd
+
+# Development files copied into public game folders
+public/games/**/node_modules/
+public/games/**/.tools/
+public/games/**/docs/
+public/games/**/tests/
+public/games/**/tools/
+public/games/**/*.md
+public/games/**/package.json
+public/games/**/package-lock.json
+public/games/**/.env*
+public/games/**/.gitignore
+public/games/**/start-game.cmd
+public/games/**/server.js
+public/games/**/tank_server.py
+public/games/**/cloud-auth.js
+
+# Root-only source images; runtime copies are in public/assets/
+/*.jpg
+/*.jpeg
+/*.png
+/*.webp
