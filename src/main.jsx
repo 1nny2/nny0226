@@ -2,12 +2,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const A='/assets/';
+const A=`${import.meta.env.BASE_URL}assets/`;
+const G=`${import.meta.env.BASE_URL}games/`;
 const projects=[
- {n:'01',title:'飞机大战',type:'AI 编程 · 交互游戏',desc:'把想法拆成可玩的系统，在浏览器里完成一场关于反应、节奏和反馈的练习。',logic:'Canvas 游戏循环驱动移动、碰撞与敌机生成，状态机管理关卡和 Boss 战。',img:A+'game1.webp',link:'/games/game1/index.html',tag:'PLAY'},
- {n:'02',title:'坦克大战',type:'AI 编程 · 双人游戏',desc:'四方向操控与地图博弈，和同学一起把玩法、关卡和细节逐步做完整。',logic:'固定时间步更新坦克、炮弹和地图碰撞；联机模式由服务端同步对局状态。',img:A+'game2.webp',link:'/games/game2/index.html',tag:'PLAY'},
- {n:'03',title:'手势切水果',type:'AI 编程 · 视觉交互',desc:'用摄像头和手势追踪把身体动作变成游戏输入，探索自然的互动方式。',logic:'手势识别提取手部坐标，再把移动轨迹映射成切割线，与水果进行实时碰撞判定。',img:A+'game3.webp',link:'/games/game3/index.html',tag:'PLAY'},
- {n:'04',title:'手势识别星云',type:'AI 编程 · Three.js',desc:'在星海中观察、扫描和修复，把复杂的交互拆成一步步可以理解的探索。',logic:'Three.js 负责星海场景，手势输入驱动观察与解谜状态，浏览器本地保存探索进度。',img:A+'game4.webp',link:'/games/game4/index.html',tag:'PLAY'}
+ {n:'01',title:'飞机大战',type:'AI 编程 · 交互游戏',desc:'把想法拆成可玩的系统，在浏览器里完成一场关于反应、节奏和反馈的练习。',logic:'Canvas 游戏循环驱动移动、碰撞与敌机生成，状态机管理关卡和 Boss 战。',img:A+'game1.webp',link:G+'game1/index.html',tag:'PLAY'},
+ {n:'02',title:'坦克大战',type:'AI 编程 · 双人游戏',desc:'四方向操控与地图博弈，和同学一起把玩法、关卡和细节逐步做完整。',logic:'固定时间步更新坦克、炮弹和地图碰撞；联机模式由服务端同步对局状态。',img:A+'game2.webp',link:G+'game2/index.html',tag:'PLAY'},
+ {n:'03',title:'手势切水果',type:'AI 编程 · 视觉交互',desc:'用摄像头和手势追踪把身体动作变成游戏输入，探索自然的互动方式。',logic:'手势识别提取手部坐标，再把移动轨迹映射成切割线，与水果进行实时碰撞判定。',img:A+'game3.webp',link:G+'game3/index.html',tag:'PLAY'},
+ {n:'04',title:'手势识别星云',type:'AI 编程 · Three.js',desc:'在星海中观察、扫描和修复，把复杂的交互拆成一步步可以理解的探索。',logic:'Three.js 负责星海场景，手势输入驱动观察与解谜状态，浏览器本地保存探索进度。',img:A+'game4.webp',link:G+'game4/index.html',tag:'PLAY'}
 ];
 const songs=['晴天','水星记','老男孩','Always Online','温柔','后来的我们','如果可以','我会等','你从未离去'];
 const almaLetters=[
@@ -16,7 +17,7 @@ const almaLetters=[
 ];
 function LetterPage({letter}){
  const goBack=(event)=>{if(window.history.length>1){event.preventDefault();window.history.back();}};
- return <div className="letter-page"><header className="letter-page-nav"><a className="letter-back" href="/#alma-mater" onClick={goBack}>← 返回正文内容</a><span>08 / LETTER</span></header><main className="letter-page-main"><p className="eyebrow">LETTER TO MY ALMA MATER</p><h1>{letter.title}</h1><p className="letter-page-intro">有些话适合慢慢写下来，也适合在想起母校时重新读一遍。</p><article className="letter-page-body"><p>{letter.body}</p><small>倪诺越</small></article></main></div>
+ return <div className="letter-page"><header className="letter-page-nav"><a className="letter-back" href="./#alma-mater" onClick={goBack}>← 返回正文内容</a><span>08 / LETTER</span></header><main className="letter-page-main"><p className="eyebrow">LETTER TO MY ALMA MATER</p><h1>{letter.title}</h1><p className="letter-page-intro">有些话适合慢慢写下来，也适合在想起母校时重新读一遍。</p><article className="letter-page-body"><p>{letter.body}</p><small>倪诺越</small></article></main></div>
 }
 function App(){
  const [menu,setMenu]=React.useState(false);
@@ -36,7 +37,7 @@ function App(){
    <section className="section music" id="music"><div className="section-no">07</div><div className="music-heading"><h2>音乐让我<br/><em>律动青春。</em></h2><p>我有吉他的特长。这里放着我会反复练习的歌，也记录着成长里那些需要被留住的旋律。</p></div><div className="music-layout"><article className="music-feature-card"><span className="music-performance-index">01</span><div className="music-performance"><small>现场演出 / GUITAR PERFORMANCE</small><h3>吉他表演</h3><p>把熟悉的旋律弹成属于自己的现场。</p></div><b className="music-watermark">♪</b><strong className="music-label">GUITAR PERFORMANCE</strong></article><div className="song-list">{songs.map((s,i)=><div key={s}><span>0{i+1}</span><b>{s}</b><small>吉他弹唱</small></div>)}</div></div></section>
    <section className="section alma-mater" id="alma-mater"><div className="section-no">08</div><div className="alma-mater-head"><h2>母校是我的<br/><em>港湾。</em></h2><p>那些被学校记录下来的时刻，也成为我继续向前时可以回望的来处。</p></div><div className="alma-mater-grid"><div className="alma-articles"><a className="alma-card" href="https://mp.weixin.qq.com/s/ga-z0F18-fhAWvnJS8zrpg" target="_blank" rel="noreferrer"><span>天台中学 / 公众号文章</span><h3>庆祝天台中学<br/>120周年</h3><p>回到熟悉的校园，看看一所百年学校如何走过新的里程。</p><strong>阅读文章 ↗</strong></a><a className="alma-card" href="https://mp.weixin.qq.com/s/jO60nGvw5a_HDlgO3gWZQA" target="_blank" rel="noreferrer"><span>平桥镇中学 / 公众号报道</span><h3>平桥镇中学<br/>关于我的报道</h3><p>一篇来自母校的记录，保存我曾经参与和成长的片段。</p><strong>阅读文章 ↗</strong></a></div><article className="alma-letter-card"><span>LETTER / 给母校的话</span><h3>我想对母校说</h3><div className="alma-letter-preview">{almaLetters.map((letter,i)=><a key={letter.title} href={i===0?'?letter=tiantai':'?letter=pingqiao'}><b>{letter.title}</b><p>{letter.preview}</p><strong>进入这封信 ↗</strong></a>)}</div></article></div></section>
    <section className="section skills" id="skills"><div className="section-no">09</div><div className="section-head"><p className="eyebrow">DIRECTIONS</p><h2>我正在增强的<br/>四个方向。</h2></div><div className="skills-grid">{[['01','单片机等硬件的开发','从 C 语言、电路基础开始，理解一个想法如何进入真实世界。'],['02','视频交互与数据拟合','对视觉、动作和数据之间的关系保持好奇，持续尝试。'],['03','AI 学习','把 AI 当成一起写代码、做产品和调试想法的搭档。'],['04','项目与团队协作','从班级事务到公益项目，负责沟通、推进和落地。']].map(x=><article key={x[0]}><span>{x[0]}</span><h3>{x[1]}</h3><p>{x[2]}</p><i>↗</i></article>)}</div></section>
-   <section className="contact" id="contact"><div className="contact-main"><div className="contact-copy"><p className="eyebrow">LET'S KEEP IN TOUCH</p><h2>欢迎交流，<br/>剩下的成长路，<em>一起走。</em></h2><div className="contact-links"><a href="tel:18006868105">180 0686 8105 ↗</a><span>QQ 953452979</span></div></div><figure className="contact-qr"><img src="/assets/vx-qrcode.jpg" alt="微信二维码"/><figcaption>扫码添加我为朋友</figcaption></figure></div><footer><span>倪诺越 / NINYUE</span><span>安徽大学 · 电子信息工程</span><span>© 2026</span></footer></section>
+   <section className="contact" id="contact"><div className="contact-main"><div className="contact-copy"><p className="eyebrow">LET'S KEEP IN TOUCH</p><h2>欢迎交流，<br/>剩下的成长路，<em>一起走。</em></h2><div className="contact-links"><a href="tel:18006868105">180 0686 8105 ↗</a><span>QQ 953452979</span></div></div><figure className="contact-qr"><img src={A+'vx-qrcode.jpg'} alt="微信二维码"/><figcaption>扫码添加我为朋友</figcaption></figure></div><footer><span>倪诺越 / NINYUE</span><span>安徽大学 · 电子信息工程</span><span>© 2026</span></footer></section>
   </main>
  </div>
 }
