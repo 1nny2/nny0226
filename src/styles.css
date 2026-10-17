@@ -210,8 +210,10 @@ h1,h2,h3{letter-spacing:-.04em}
   .project:first-child .project-image{height:380px}
 }
 @media(max-width:800px){.hero-content{width:100%;min-width:0;max-width:100%}.hero h1{font-size:clamp(40px,10.5vw,52px);letter-spacing:-.01em;overflow-wrap:anywhere}.hero h1 span{display:block}.growth-heading h2,.music-heading h2,.alma-mater-head h2{font-size:62px}.contact h2{font-size:58px}.ai-project-image,.welfare-feature-image,.welfare-card img{aspect-ratio:4/3}.welfare-card>div,.welfare-feature-copy{min-height:0}}
+@media(max-width:800px){.section-head.row{display:block}.section-head.row>p{margin-top:28px}}
 /* 各模块标题的第二行作为统一视觉强调 */
 .section-head h2 em{color:var(--lime);font-style:normal;font-weight:700}
+:where(.alma-mater-head h2) em{display:inline;font-size:1em;line-height:inherit;letter-spacing:inherit}
  :where(a,button):focus-visible{outline:2px solid var(--lime);outline-offset:4px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 /* 中文展示标题放松字距与行距 */
