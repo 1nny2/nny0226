@@ -233,3 +233,15 @@ h1,h2,h3{letter-spacing:-.04em}
 /* 绿色强调行略大于白色主标题 */
 .growth-heading h2 em,.music-heading h2 em,.alma-mater-head h2 em{font-size:1.12em}
 @media(max-width:800px){.growth-heading h2 em,.music-heading h2 em,.alma-mater-head h2 em{font-size:1.1em}}
+
+/* 横向公益卡片与音乐标题对齐 */
+.welfare-grid{display:flex;flex-direction:column;gap:34px}
+.welfare-feature,.welfare-card{display:grid;grid-template-columns:minmax(280px,.72fr) 1fr;gap:24px;align-items:start;border-top:1px solid var(--line);padding-top:18px}
+.welfare-feature-image,.welfare-card img{height:220px}
+.welfare-feature-copy,.welfare-card>div{padding:16px 0 0}
+.welfare-strip{display:grid;grid-template-columns:180px 180px 1fr;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:18px;margin-top:0}
+.welfare-strip img{height:150px;border-radius:10px}
+.welfare-strip h3{font-size:28px;line-height:1.05;margin:12px 0 8px}
+.music-title-line{white-space:nowrap}
+.music-heading h2 em{display:inline;font-size:1.2em;line-height:inherit;margin:0;letter-spacing:0}
+@media(max-width:800px){.welfare-feature,.welfare-card{grid-template-columns:1fr;gap:0}.welfare-feature-image,.welfare-card img{height:230px}.welfare-strip{grid-template-columns:1fr 1fr}.welfare-strip img{height:130px}.welfare-strip div{grid-column:1/-1;padding-left:0}.music-heading h2 em{font-size:1.16em}}
