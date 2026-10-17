@@ -250,3 +250,10 @@ h1,h2,h3{letter-spacing:-.04em}
 .music-heading h2 em{display:block;font-size:1.12em;line-height:.95;margin:0;letter-spacing:0}
 .growth-feature h3{letter-spacing:.02em;line-height:1.05}
 @media(max-width:800px){.music-heading h2 em{font-size:1.08em}.growth-feature h3{font-size:54px;letter-spacing:.01em;line-height:1.08}}
+
+/* 公益横向卡片统一行高 */
+.welfare-strip,.welfare-feature,.welfare-card{min-height:252px}
+.welfare-strip img,.welfare-feature-image,.welfare-card img{height:220px}
+.welfare-strip{align-items:start}
+.welfare-strip span{font:11px 'DM Mono';color:var(--lime);letter-spacing:.08em}
+@media(max-width:800px){.welfare-strip,.welfare-feature,.welfare-card{min-height:0}.welfare-strip img,.welfare-feature-image,.welfare-card img{height:230px}}
