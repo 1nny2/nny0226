@@ -274,3 +274,11 @@ h1,h2,h3{letter-spacing:-.04em}
 /* 公益卡片收窄，减少单张卡片占用的横向版面 */
 .welfare-grid{max-width:1280px}
 @media(max-width:800px){.welfare-grid{max-width:none}}
+
+/* 标题字体统一与行距调整 */
+.music-heading h2 em,.welfare .section-head h2 em,.contact h2 em{font-family:var(--font-sans);font-weight:700}
+.music-heading h2 em{font-size:1.05em}
+.welfare .section-head h2 em{font-size:1.08em}
+.contact h2 em{font-size:1em}
+.growth-heading h2{line-height:1.12}
+@media(max-width:800px){.growth-heading h2{line-height:1.14}.music-heading h2{line-height:.9}}
