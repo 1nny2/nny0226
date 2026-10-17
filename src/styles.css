@@ -275,6 +275,9 @@ h1,h2,h3{letter-spacing:-.04em}
 .welfare-grid{max-width:1280px}
 @media(max-width:800px){.welfare-grid{max-width:none}}
 
+/* 移动端联系标题避免中文短词孤行 */
+@media(max-width:800px){.contact h2{font-size:44px;letter-spacing:-.08em;line-height:1.08}}
+
 /* 标题字体统一与行距调整 */
 .music-heading h2 em,.welfare .section-head h2 em,.contact h2 em{font-family:var(--font-sans);font-weight:700}
 .music-heading h2 em{font-size:1.05em}
