@@ -267,3 +267,10 @@ h1,h2,h3{letter-spacing:-.04em}
 /* 音乐标题第二行保持完整 */
 .music-title-rest{display:inline-block;white-space:nowrap}
 @media(max-width:800px){.music-heading h2{font-size:52px}.music-heading h2 em{font-size:1.08em}}
+
+/* 联系标题第二行保持完整 */
+.contact-title-rest{display:inline-block;white-space:nowrap}
+
+/* 公益卡片收窄，减少单张卡片占用的横向版面 */
+.welfare-grid{max-width:1280px}
+@media(max-width:800px){.welfare-grid{max-width:none}}
