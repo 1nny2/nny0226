@@ -263,3 +263,7 @@ h1,h2,h3{letter-spacing:-.04em}
 .welfare-strip-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;height:220px}
 .welfare-strip-images img{width:100%;height:220px;object-fit:cover;border-radius:10px}
 @media(max-width:800px){.welfare-feature,.welfare-card,.welfare-strip{grid-template-columns:1fr}.welfare-strip-images{height:230px}.welfare-strip-images img{height:230px}}
+
+/* 音乐标题第二行保持完整 */
+.music-title-rest{display:inline-block;white-space:nowrap}
+@media(max-width:800px){.music-heading h2{font-size:52px}.music-heading h2 em{font-size:1.08em}}
