@@ -164,7 +164,7 @@
 /* 公益项目卡片节奏 */
 .welfare{padding-top:96px;padding-bottom:110px}
 .welfare .section-no{margin-bottom:18px}
-.welfare .section-head.row h2{font-size:clamp(50px,5.6vw,84px);margin-bottom:34px}
+.welfare .section-head.row h2{font-size:clamp(46px,5vw,76px);margin-bottom:34px}.welfare .section-head.row h2 em{font-size:1.2em}.ai-title-line{white-space:nowrap}
 .welfare .section-head.row>p{margin-bottom:4px}
 .welfare-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 22px;margin-top:34px}
 .welfare-feature{grid-row:auto;display:block;border:0;border-top:1px solid var(--line);border-radius:0;overflow:visible;background:transparent;padding-top:18px}
@@ -176,7 +176,7 @@
 .welfare-card>div{padding-top:16px}
 .welfare-card h3{font-size:28px;line-height:1.05;margin:12px 0 8px}
 .welfare-strip{grid-column:1/-1;grid-template-columns:180px 180px 1fr;margin-top:10px}
-@media(max-width:800px){.welfare{padding-top:76px;padding-bottom:78px}.welfare .section-head.row{display:block}.welfare .section-head.row h2{font-size:58px;margin-bottom:28px}.welfare-grid{grid-template-columns:1fr;gap:42px;margin-top:28px}.welfare-feature-image,.welfare-card img{height:230px}.welfare-strip{grid-template-columns:1fr 1fr;margin-top:0}}
+@media(max-width:800px){.welfare{padding-top:76px;padding-bottom:78px}.welfare .section-head.row{display:block}.welfare .section-head.row h2{font-size:50px;margin-bottom:28px}.welfare-grid{grid-template-columns:1fr;gap:42px;margin-top:28px}.welfare-feature-image,.welfare-card img{height:230px}.welfare-strip{grid-template-columns:1fr 1fr;margin-top:0}}
 /* 09 紧凑排版 */
 .welfare{padding-top:72px;padding-bottom:82px}
 .welfare .section-no{margin-bottom:12px}
