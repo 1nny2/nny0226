@@ -298,3 +298,6 @@ h1,h2,h3{letter-spacing:-.04em}
 
 /* 手机端统计数据改为两列，保证数值完整显示 */
 @media(max-width:800px){.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.stats strong{white-space:nowrap}}
+
+/* 桌面端英雄标题第二行保持完整 */
+@media(min-width:801px){.hero-second-line{display:block;white-space:nowrap}}
